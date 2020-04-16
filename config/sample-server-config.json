@@ -1,0 +1,4 @@
+{
+    "_comment" : "copy this file to server-config.json and insert real values",
+    "session-secret" : "someSecret"
+}
