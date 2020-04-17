@@ -1,15 +1,15 @@
-import express, { static } from 'express';
-import session from 'express-session';
-import mysql from 'mysql';
-import { existsSync, readFileSync } from 'fs';
+const express = require('express');
+const session = require('express-session');
+const mysql = require('mysql');
+const fs = require('fs');
 
 console.log("Starting report-viewer::main");
 
 // Parse the configuration
 const configPath = "config/server-config.json";
 let config = {};
-if (existsSync(configPath)) {
-    config = JSON.parse(readFileSync(configPath,'utf8'));
+if (fs.existsSync(configPath)) {
+    config = JSON.parse(fs.readFileSync(configPath,'utf8'));
 } else {
     console.log("ERROR: missing config/server-config.json.");
     return;
@@ -21,7 +21,7 @@ app.use(session({
     resave : false,
     saveUninitialized : false}));
 
-app.use(static('./public'));
+app.use(express.static('./public'));
 
 
 // app.get('/', (req, res) => {
