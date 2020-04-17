@@ -1,5 +1,9 @@
 {
     "_comment" : "copy this file to server-config.json and insert real values",
     "port" : 3000,
-    "sessionSalt" : "someSecret"
+    "sessionSalt" : "someSecret",
+    "dbUser" : "report",
+    "dbPassword" : "put encrypted value here",
+    "dbHost" : "localhost",
+    "dbName" : "report_viewer"
 }
