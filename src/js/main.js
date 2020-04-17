@@ -17,7 +17,7 @@ if (fs.existsSync(configPath)) {
 
 const app = express();
 app.use(session({
-    secret : config.secret, 
+    secret : config.sessionSalt, 
     resave : false,
     saveUninitialized : false}));
 
@@ -38,6 +38,6 @@ app.get('/api', (req, res) => {
 
 });
 
-app.listen('3000', () => {
-    console.log('Server started on port 3000');
+app.listen(config.port, () => {
+    console.log(`Server started on port ${config.port} `);
 });
