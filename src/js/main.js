@@ -12,7 +12,7 @@ if (fs.existsSync(configPath)) {
     config = JSON.parse(fs.readFileSync(configPath,'utf8'));
 } else {
     console.log("ERROR: missing config/server-config.json.");
-    return;
+    throw "server-config.json was not found";
 }
 
 // Create an Express server.
