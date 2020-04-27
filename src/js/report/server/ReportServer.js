@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const fs = require('fs');
 const mysql = require('mysql');
+const RouteService = require('./routes/RouteService');
 
  module.exports = class ReportServer {
 
@@ -60,16 +61,9 @@ const mysql = require('mysql');
 
         // Serve up the ui as static files   
         this.server.use(express.static('./public'));   
-
-        // Set up a single test route for now. 
-        this.server.get('/api', (req, res) => {
-            const sql = 'select * from report_viewer.report';
-            this.db.query(sql, (err, result) => {
-                if(err) throw err;
-                console.log(result);
-                res.send(result);
-            });
-        }); 
+        
+        // Set up the routes
+        RouteService.addDefaultRoutes(this);
 
         // Start the server.
         this.server.listen(this.config.port, () => {
