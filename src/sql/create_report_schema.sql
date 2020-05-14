@@ -5,7 +5,7 @@ create database report_results;
 
 CREATE TABLE report_viewer.report (
   id int(11) NOT NULL AUTO_INCREMENT,
-  name varchar(255) NOT NULL,
+  name varchar(200) NOT NULL,
   runDate datetime,
   PRIMARY KEY (id),
   UNIQUE KEY  (name,runDate)
