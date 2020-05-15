@@ -2,7 +2,7 @@
 var path = require('path');
 module.exports = {
     mode : 'development',
-    entry : './src/js/report/ui/app.js',
+    entry : './src/js/report/viewer/ui/app.js',
     output : {
         filename : 'report-viewer.js',
         path : path.resolve('./public/ui/')
