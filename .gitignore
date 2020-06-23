@@ -1,5 +1,5 @@
 dist
-public/ui
+public/ui/report-viewer.js
 node_modules
 config/server-config.json
 *.swp
