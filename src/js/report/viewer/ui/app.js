@@ -16,6 +16,7 @@ app.config(function($routeProvider) {
 // Declaring inline temporarily.  (separate file fails)
 app.controller("reportListCtrl",
 function($scope, $http) {
+    console.log("Entering reportListCtrl");
     $scope.message = "message from reportListCtrl in app.js";
     $http({
       method : "GET",
@@ -27,3 +28,10 @@ function($scope, $http) {
     })
   }
 );
+
+app.controller('reportCtrl',
+function($scope, $route, $routeParams) {
+  console.log("Entering reportCtrl");
+  console.log( 'name is ' + $routeParams.name);
+  $scope.message = "message from reportCtrl.js";
+});
