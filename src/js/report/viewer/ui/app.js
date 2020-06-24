@@ -30,8 +30,10 @@ function($scope, $http) {
 );
 
 app.controller('reportCtrl',
-function($scope, $route, $routeParams) {
+function($scope, $routeParams, $location) {
   console.log("Entering reportCtrl");
+  console.log("location.path() is " + $location.path());
   console.log( 'name is ' + $routeParams.name);
+  $scope.name = $routeParams.name;
   $scope.message = "message from reportCtrl.js";
 });
