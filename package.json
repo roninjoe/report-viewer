@@ -11,6 +11,7 @@
   "author": "Joe Ronin",
   "license": "ISC",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.26",
     "angular-route": "^1.7.9",
     "angularjs": "^1.7.9",
     "express": "^4.17.1",
