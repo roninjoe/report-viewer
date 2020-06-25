@@ -1,0 +1,8 @@
+{
+    "_comment" : "copy this file to report-config.json and insert real values",
+    "sessionSalt" : "someSecret",
+    "dbUser" : "report",
+    "dbPassword" : "put encrypted value here",
+    "dbHost" : "localhost",
+    "dbName" : "report_viewer"
+}
