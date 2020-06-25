@@ -4,6 +4,7 @@
   "description": "Viewer for report runner.",
   "main": "./src/js/main.js",
   "scripts": {
+    "report": "node src/js/report/runner/ReportRunner.js",
     "start": "node src/js/launch.js",
     "watch": "webpack --progress --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
