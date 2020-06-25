@@ -3,3 +3,4 @@ public/ui/report-viewer.js
 node_modules
 config/server-config.json
 *.swp
+sample_reports/report-config.json
